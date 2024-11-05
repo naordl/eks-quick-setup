@@ -1,0 +1,9 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: gp2-immediate
+provisioner: ebs.csi.aws.com # Adjust the provisioner if needed
+parameters:
+  type: gp2
+  # reclaimPolicy: Retain
+  # volumeBindingMode: Immediate

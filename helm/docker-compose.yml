@@ -1,0 +1,10 @@
+services:
+  eks-helm-deployer:
+    build: .
+    container_name: eks-helm-deployer
+    environment:
+      - AWS_DEFAULT_REGION=eu-west-1
+      - KUBECONFIG=/root/.kube/config
+    volumes:
+      - ~/.aws:/root/.aws
+      - ~/.kube:/root/.kube
