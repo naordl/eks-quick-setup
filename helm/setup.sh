@@ -8,11 +8,11 @@ ACCOUNT_ID=$(aws sts get-caller-identity --query "Account" --output text)
 
 # Find the EKS stack name by partial match on stack name
 # If you gave a different name to the stack during deployment, you will have to edit this line
-EKS_STACKNAME=$(aws cloudformation describe-stacks --region ${AWS_REGION} --query 'Stacks[?contains(StackName, `banking-project-eks`)].StackName' --output text)
+EKS_STACKNAME=$(aws cloudformation describe-stacks --region ${AWS_REGION} --query 'Stacks[?contains(StackName, `eks-quick-setup`)].StackName' --output text)
 
 # Find the CodePipeline stack name by partial match on stack name
 # If you gave a different name to the stack during deployment, you will have to edit this line
-PIPELINE_STACKNAME=$(aws cloudformation describe-stacks --region ${AWS_REGION} --query 'Stacks[?contains(StackName, `banking-project-pipeline`)].StackName' --output text)
+PIPELINE_STACKNAME=$(aws cloudformation describe-stacks --region ${AWS_REGION} --query 'Stacks[?contains(StackName, `eks-quick-setup-pipeline`)].StackName' --output text)
 
 # Exit with an error if the stacks can't be retrieved
 # This means that either the stack names or the region where the stacks are deployed differs
