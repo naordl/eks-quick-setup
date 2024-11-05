@@ -9,11 +9,11 @@ spec:
       args:
         [
           "--cpu",
-          "4",
+          "6",
           "--cpu-load",
           "80",
           "--vm",
-          "4",
+          "6",
           "--vm-bytes",
           "1G",
           "--timeout",
