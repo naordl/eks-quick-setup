@@ -37,7 +37,7 @@ Parameters:
 
   TemplateName:
     Type: String
-    Default: template.yaml
+    Default: eks-quick-setup.yaml
 
   IAMUserName:
     Type: String
